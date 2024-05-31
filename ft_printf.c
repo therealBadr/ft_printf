@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void	check_type(va_list argp, char str, int *count)
+void	check_type(va_list argp, const char str, int *count)
 {
 	// Conversions to implement:
 	//
@@ -46,11 +46,9 @@ int	ft_printf(const char *str, ...)
 			check_type(argp, *str, &count);
 		}
 		else
-		{
-			write(1, str, 1);
-			count++;
-		}
+			ft_putchar(*str, &count);
 		str++;
 	}
+	va_end(argp);
 	return (count);
 }

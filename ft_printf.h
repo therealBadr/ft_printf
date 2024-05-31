@@ -12,6 +12,7 @@ void ft_putstr(char *str, int *count);
 void ft_putnbr(int n, int *count);
 void ft_putnbr_u(unsigned int n, int *count);
 void ft_putnbr_hex(unsigned int n, char s, int *count);
+void	ft_putnbr_hex_long(unsigned long n, char s, int *count);
 void ft_putaddr(void *ptr, int *count);
 
 #endif

@@ -6,5 +6,8 @@ void	ft_putaddr(void *ptr, int *count)
 
 	addr = (unsigned long)ptr;
 	ft_putstr("0x", count);
-	ft_putnbr_hex(addr, 'x', count);
+	if (addr == 0)
+		ft_putchar('0', count);
+	else
+		ft_putnbr_hex_long(addr, 'x', count);
 }
